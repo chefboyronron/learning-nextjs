@@ -1,13 +1,4 @@
-import { useRouter } from 'next/router';
-
 function Post({ post }) {
-
-    const router = useRouter();
-
-    if( router.isFallback ) {
-        return <h1>Loading...</h1>
-    }
-
     return (
         <div>
             <h1>{post.id} {post.title}</h1>
@@ -44,7 +35,9 @@ export async function getStaticPaths() {
         
         // V2 - Dynamically render static paths
         // paths: paths,
-        fallback: true
+        // fallback blocking generate the static file on the server side then render on the client side
+        // SEO friendly
+        fallback: 'blocking'
     }
 }
 
