@@ -1,5 +1,14 @@
+import Link from 'next/link';
+
 function Prerendering() {
-    return <h1>Next JS pre-rendering</h1>
+    return (
+        <div>
+            <h1>Next JS pre-rendering</h1>
+            <Link href='/prerendering/users'>
+                <a>Users</a>
+            </Link>
+        </div>
+    )
 }
 
 export default Prerendering;
