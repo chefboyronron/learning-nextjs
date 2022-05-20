@@ -27,6 +27,17 @@ function UserList({ users }) {
     )
 }
 
+/**
+ * NOTE: getStaticProps()
+ * 1. Run only on the server side
+ * 2. Including API keys won't show in the browsers
+ * 3. Use only for pre-rendering not for client-side data fetching
+ * 4. Should return an object and should contain "props" key which is also an object
+ * 
+ * - Please see implementation below
+ */
+ 
+
 export async function getStaticProps() {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json();
