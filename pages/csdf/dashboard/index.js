@@ -5,20 +5,13 @@ function Dashboard() {
     const [dashboardData, setDashboardData] = useState(null);
 
     useEffect( ()=> {
-        async function realTimeFetch(interval = 2000) {
-            let handle = setInterval(()=>{
-                async function fetchDashboardData() {
-                    const response = await fetch('http://localhost:4000/dashboard/');
-                    const data = await response.json();
-                    setDashboardData(data);
-                    setisLoading(false);
-                    clearInterval(handle);
-                    realTimeFetch(10000);
-                }
-                fetchDashboardData();
-            }, interval);
+        async function fetchDashboardData() {
+            const response = await fetch('http://localhost:4000/dashboard/');
+            const data = await response.json();
+            setDashboardData(data);
+            setisLoading(false);
         }
-        realTimeFetch();
+        fetchDashboardData();
     }, []);
 
     if( isLoading ) {
