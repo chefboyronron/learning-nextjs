@@ -32,3 +32,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# NOTE
+1. SSG - Static Site Generation
+  - [commit -m "Static Generation with getStaticProps()"](https://github.com/chefboyronron/learning-nextjs/commit/144a3dce37b9ff9c47a5524b1dd453448df518d7)
+2. ISG - Incremental Static Generation
+  - [commit -m "Incremental Static Generation (ISG)"](https://github.com/chefboyronron/learning-nextjs/commit/c727f21a7fcd73130a02967abed3a5817cf9c8ca)
+3. SSR - Server Side Rendering
