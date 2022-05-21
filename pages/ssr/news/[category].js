@@ -20,13 +20,15 @@ function ArticleListByCategory( {articles, category} ) {
 export async function getServerSideProps(context) {
     const { params, req, res, query } = context;
     // Object: category parameter from URL segments or URL query parameters
-    console.log(query);
+    // console.log(query);
     // initial "undefined" the value changed after revisiting page with the value of Set-Cookie
-    console.log(req.headers.cookie); 
+    // console.log(req.headers.cookie); 
     res.setHeader('Set-Cookie', ['name=Ron']);
     const { category } = params;
     const response = await fetch(`http://localhost:4000/news?category=${category}`);
     const data = await response.json();
+
+    console.log(`Pre-rendering News Articles for category ${category}`);
 
     return {
         props: {
