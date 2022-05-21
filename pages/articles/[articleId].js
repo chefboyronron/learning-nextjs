@@ -20,19 +20,24 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { params } = context;
+    console.log(`Regenerating article ${params.articleId}`);
     const response = await fetch(`http://localhost:4000/articles/${params.articleId}`);
     const data = await response.json();
 
+    console.log(data);
+
     if( !data.id ) {
         return{
-            notFound: true
+            notFound: true,
+            revalidate: 10
         }
     }
 
     return {
         props: {
             article: data
-        }
+        },
+        revalidate: 10
     }
 }
 

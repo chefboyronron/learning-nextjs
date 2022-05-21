@@ -21,13 +21,15 @@ function ArticleList( {articles} ) {
 }
 
 export async function getStaticProps() {
+    console.log('Generating / Regenerating ArticleList');
     const response = await fetch('http://localhost:4000/articles');
     const data = await response.json();
-
+    console.log(data);
     return {
         props: {
             articles: data
-        }
+        },
+        revalidate: 30,
     }
 
 }
