@@ -1,9 +1,7 @@
+import styles from '../../styles/About.module.css';
+
 function About() {
-    return(
-        <>
-            <button className='btn btn-success'>Primary</button>
-        </>
-    )
+    return <div className={styles.highlight}>About Page</div>
 }
 
 export default About;
