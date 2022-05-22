@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
 
     return {
         props: {
-            comment: data
+            comment: comment
         }
     }
 }
