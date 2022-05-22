@@ -1,3 +1,8 @@
+// Layout
+import Header from '../components/misc/header'
+import Footer from '../components/misc/footer'
+import '../styles/misc/layout.scss'
+
 import '../styles/globals.css'
 // npm install bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,10 +17,19 @@ const theme = {
 }
 
 function MyApp({ Component, pageProps }) {
+
+  if( typeof Component.getLayout !== 'undefined' ) {
+    return Component.getLayout(<Component {...pageProps} />)
+  }
+
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <Header />
+        <ThemeProvider theme={theme}>
+            <Component {...pageProps} />
+        </ThemeProvider>
+      <Footer />
+    </>
   )
 }
 
