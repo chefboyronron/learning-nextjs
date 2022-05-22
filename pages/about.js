@@ -1,3 +1,7 @@
+/**
+ * Permanent redirect set in next.config.js
+ */
+
 function About() {
     return <h1>About Page</h1>
 }
