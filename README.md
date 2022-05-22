@@ -43,3 +43,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - [commit -m "Server Side Rendering (SSR)"](https://github.com/chefboyronron/learning-nextjs/commit/cd79d02b267c33c88df04786ba0f1d80f2fbcd7c)
 4. Static HTML Export - Cannot Use ISR or SSR feature
   - in packege.json > "scripts" > "export": "next build && next export" > run > npm run export
+5. [Typescript Suport](https://www.youtube.com/watch?v=2SLLvO9OK10&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH&index=61)
