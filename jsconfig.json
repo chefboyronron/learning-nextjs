@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        /** 
+        * importing files not required ../ etc if this is enable
+        * old: import Header from '../components/misc/header'
+        * new: old: import Header from 'components/misc/header'
+        */
+
+        "baseUrl": ".",
+        
+        /**
+        * "paths" required the baseUrl props is enable
+        * An alias for importing modules
+        * usage: 
+        * old: import Header from '../components/misc/header'
+        * new: import Header from '@/misc/header'
+        */
+
+        "paths": {
+            "@/misc/*" : ["components/misc/*"]
+        }
+    }
+}

@@ -1,7 +1,8 @@
 // Head Component - meta data
 import Head from 'next/head'
 // Layout
-import Header from '../components/misc/header'
+// "Header" Alias path import please look jsconfig.json for configuration.
+import Header from '@/misc/header'
 import Footer from '../components/misc/footer'
 import '../styles/misc/layout.scss'
 
