@@ -1,3 +1,5 @@
+// Head Component - meta data
+import Head from 'next/head'
 // Layout
 import Header from '../components/misc/header'
 import Footer from '../components/misc/footer'
@@ -24,6 +26,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+          <title>Default Title Tag</title>
+          <meta name="description" content="Default meta description tag" />
+      </Head>
       <Header />
         <ThemeProvider theme={theme}>
             <Component {...pageProps} />
