@@ -40,3 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 2. ISG - Incremental Static Generation
   - [commit -m "Incremental Static Generation (ISG)"](https://github.com/chefboyronron/learning-nextjs/commit/c727f21a7fcd73130a02967abed3a5817cf9c8ca)
 3. SSR - Server Side Rendering
+  - [commit -m "Server Side Rendering (SSR)"](https://github.com/chefboyronron/learning-nextjs/commit/cd79d02b267c33c88df04786ba0f1d80f2fbcd7c)
