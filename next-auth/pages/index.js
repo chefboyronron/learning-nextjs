@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useSession } from 'next-auth/client'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const [session, loading] = useSession();
+  console.log({session, loading});
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +16,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          { session ? `${session.user.name}, ` : ''  }Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
